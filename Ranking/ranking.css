@@ -1,0 +1,209 @@
+:root {
+    --body-bg: #020617;
+    --container-bg: #0f172a;
+    --primary-blue: #38bdf8;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --border: #1e293b;
+    
+    /* Colores de Categorías */
+    --gold: #fbbf24;
+    --gold-bg: rgba(251, 191, 36, 0.08);
+    --silver: #cbd5e1;
+    --silver-bg: rgba(203, 213, 225, 0.08);
+    --bronze: #fb923c;
+    --bronze-bg: rgba(251, 146, 60, 0.08);
+}
+
+body {
+    background-color: var(--body-bg);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.main-wrapper { 
+    max-width: 1000px; 
+    margin: 0 auto; 
+}
+
+.dashboard-header { 
+    margin-bottom: 40px; 
+    text-align: center; 
+}
+
+.dashboard-header h1 { 
+    font-size: 2.2rem; 
+    font-weight: 800; 
+    letter-spacing: -1px; 
+}
+
+.highlight { 
+    color: var(--primary-blue); 
+}
+
+/* Gamificación */
+.gamification-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: var(--container-bg);
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid var(--border);
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    box-shadow: 0 0 10px currentColor;
+}
+
+.dot-gold { color: var(--gold); background: var(--gold); }
+.dot-silver { color: var(--silver); background: var(--silver); }
+.dot-bronze { color: var(--bronze); background: var(--bronze); }
+
+.card h3 { 
+    margin: 5px 0; 
+    font-size: 1rem; 
+}
+
+.card p { 
+    margin: 0; 
+    font-size: 0.85rem; 
+    color: var(--text-muted); 
+}
+
+/* Tabla */
+.table-container {
+    background: var(--container-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.ranking-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    text-align: left; 
+}
+
+.ranking-table th {
+    background: rgba(30, 41, 59, 0.5);
+    padding: 18px;
+    font-size: 0.7rem;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ranking-table td { 
+    padding: 18px; 
+    border-bottom: 1px solid var(--border); 
+}
+
+/* Filas */
+.row-gold { 
+    background: var(--gold-bg); 
+    border-left: 4px solid var(--gold); 
+}
+
+.row-gold .project-count { 
+    color: var(--gold); 
+}
+
+.row-silver { 
+    background: var(--silver-bg); 
+    border-left: 4px solid var(--silver); 
+}
+
+.row-silver .project-count { 
+    color: var(--silver); 
+}
+
+.row-bronze { 
+    background: var(--bronze-bg); 
+    border-left: 4px solid var(--bronze); 
+}
+
+.row-bronze .project-count { 
+    color: var(--bronze); 
+}
+
+.row-neutral { 
+    border-left: 4px solid transparent; 
+}
+
+/* Datos */
+.project-count {
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.names { 
+    font-weight: 600; 
+    font-size: 0.95rem; 
+}
+
+.tags { 
+    display: flex; 
+    gap: 6px; 
+}
+
+.tag {
+    background: rgba(56, 189, 248, 0.05);
+    color: var(--primary-blue);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+/* BOTÓN GITHUB ADAPTADO */
+.btn-github {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+
+  border-radius: 50px;
+  font-weight: 700;
+
+  padding: 6px 12px;
+  font-size: 0.75rem;
+
+  color: var(--primary-blue);
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+
+  transition: all 0.3s ease;
+}
+
+.btn-github:hover {
+  transform: translateY(-3px);
+  color: white;
+  background: rgba(56,189,248,0.15);
+
+  box-shadow: 0 0 10px rgba(56,189,248,0.4);
+}
+
+.btn-github svg {
+  width: 14px;
+  height: 14px;
+}
+
+.no-tags, .no-link { 
+    color: var(--text-muted); 
+    font-size: 0.8rem; 
+    font-style: italic; 
+}
